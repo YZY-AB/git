@@ -1,0 +1,132 @@
+# ============================================================
+# 通用 .gitignore —— 按"绝对不该进版本库"的内容分层组织
+# 需要新增规则时，请加到对应小节，不要散落各处
+# ============================================================
+
+# ---------------- 操作系统 ----------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---------------- 编辑器 / IDE ----------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.history/
+.fleet/
+
+# ---------------- 日志 / 临时文件 ----------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+
+# ---------------- 密钥与本地配置（防止误传） ----------------
+# 注意：.env.example 必须保留在仓库里，供他人参考
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.npmrc
+.pypirc
+secrets/
+credentials.json
+service-account*.json
+
+# ---------------- Node.js ----------------
+node_modules/
+.pnpm-store/
+.next/
+.nuxt/
+.svelte-kit/
+dist/
+build/
+out/
+coverage/
+.eslintcache
+*.tsbuildinfo
+
+# ---------------- Python ----------------
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+*.egg-info/
+.eggs/
+.ipynb_checkpoints/
+pip-wheel-metadata/
+
+# ---------------- Java / JVM ----------------
+target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+.gradle/
+build/
+bin/
+out/
+
+# ---------------- C / C++ / Go / Rust 等编译产物 ----------------
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+*.out
+*.test
+
+# ---------------- Go ----------------
+# go.sum 必须提交（校验依赖完整性），不要忽略
+vendor/
+
+# ---------------- 大体积二进制与归档文件 ----------------
+# 这类文件即使提交上去，后续 diff 和克隆都会很痛苦，建议用网盘/Release 附件
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.iso
+*.img
+*.dmg
+*.msi
+*.apk
+*.ipa
+
+# ---------------- 数据库 / 本地数据 ----------------
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+dump.rdb
